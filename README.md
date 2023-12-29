@@ -29,7 +29,8 @@
 #### Выполнение заданий.
 
 - запрос(ы) для *вставки* данных минимум о двух книгах в коллекцию **books**,
-  
+- 
+```javascript  
 db.books.insertMany([
   {
     title: 'string',
@@ -42,14 +43,17 @@ db.books.insertMany([
     description: 'string', 
   },
 ]);
-
+``` 
  - запрос для *поиска* полей документов коллекции **books** по полю *title*,
-
+ - 
+```javascript  
 db.books.find({ title: 'string' });
-
+``` 
  - запрос для *редактирования* полей: *description* и *authors* коллекции **books** по *_id* записи.
-
+ - 
+```javascript  
 db.books.updateOne(
   { _id: 'id' },
   { $set: { description: 'new string', authors: 'new string' } }
 );
+``` 
